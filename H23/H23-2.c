@@ -12,7 +12,7 @@ int find_min(int n) {
 	int min_node = -1;
 	int min_dist = 10000;
 	int i;
-	
+
 	int flag = 0;
 	int j = 10000;
 	for(i = 0; i < n; i++) {
@@ -26,7 +26,7 @@ int find_min(int n) {
 			}
 		}
 	}
-	
+
 	if(flag != 0) {
 		return j;
 	} else {
@@ -41,11 +41,11 @@ int f(int start, int end, int n) {
 		d[i] = 10000;
 		p[i] = -1;
 	}
-	
+
 	node = start;
 	checked[node] = 1;
 	d[node] = 0;
-	
+
 	while(1) {
 		howairu++;
 		for(i = 0; i < n; i++) {
@@ -54,11 +54,11 @@ int f(int start, int end, int n) {
 				p[i] = node;
 			}
 		}
-		
+
 		for(i = 0; i < n; i++) {
 			printf("d[%d] = %d\n", i, d[i]);
 		}
-		
+
 		if((node = find_min(n)) == -1) return -1;
 		checked[node] = 1;
 		if(node == end) return d[node];
@@ -70,7 +70,6 @@ int main()
 	int res;
 	int i;
 
-	
 	a[0][0] = MAX;
 	a[0][1] = 10;
 	a[0][2] = 15;
@@ -94,7 +93,7 @@ int main()
 	a[3][2] = 30;
 	a[3][3] = MAX;
 	a[3][4] = 20;
-		
+
 	a[4][0] = MAX;
 	a[4][1] = 50;
 	a[4][2] = 20;
@@ -102,7 +101,7 @@ int main()
 	a[4][4] = MAX;
 
 	res = f(0, 4, 5);
-	
+
 	printf("res = %d\n", res);
 	for(i = 0; i < 5; i++) {
 		printf("p[%d] = %d\n", i, p[i]);

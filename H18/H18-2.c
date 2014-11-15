@@ -26,7 +26,7 @@ void pr2(int x)
   }
 }
 
-/* 2”Ô */ 
+/* 2 */ 
 
 int is_symmetric(char string[])
 {
@@ -43,15 +43,13 @@ int is_symmetric(char string[])
   }
   printf("\n");
 
-  // é…åˆ—ã¸ã®ä»£å…¥
   for(i = 0; string[i]!= '\0'; i++) {
-    string2[i] = string[s-1]; //sã¯ä¸€ã¤ä¸‹ã’ã¦åˆã‚ã›ã¦ã„ã‚‹
+    string2[i] = string[s-1]; 
     printf("%c", string2[i]);
     s--;
   }
   printf("\n");
 
-  // ãƒã‚§ãƒƒã‚¯
   for(i = 0; string[i]!= '\0'; i++) {
     if(string[i] != string2[i]) {
       flag = 1;
@@ -59,10 +57,10 @@ int is_symmetric(char string[])
   }
 
   if(flag == 0) {
-    printf("ƒVƒ“ƒƒgƒŠ[‚Å‚·‚æ\n");
+    printf("symmetry\n");
     return 0;
   }else{
-    printf("ƒAƒVƒ“ƒƒgƒŠ[‚Å‚·‚æ\n");
+    printf("asymmetry\n");
     return 1;
   }
 }

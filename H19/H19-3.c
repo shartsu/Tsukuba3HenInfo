@@ -10,7 +10,7 @@ struct lettercount{
   {'d', 0},
   {'e', 0},
 };
- 
+
 void filecheck(FILE *ifp, FILE *ofp)
 {
   int i;
@@ -18,7 +18,7 @@ void filecheck(FILE *ifp, FILE *ofp)
 
   while((c = getc(ifp)) != EOF) {
     fputc(c, ofp);
-  for(i = 0; i < 5; i++) 
+  for(i = 0; i < 5; i++)
     if(c == letterdata[i].letter) letterdata[i].count++;
   }
 }

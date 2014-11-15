@@ -10,7 +10,7 @@ void filecheck(FILE *ifp, FILE *ofp)
 
   while((c = getc(ifp)) != EOF) {
     fputc(c, ofp);
-  for(i = 0; i < 5; i++) 
+  for(i = 0; i < 5; i++)
     if(c == letter[i]) count[i]++;
   }
 }
@@ -27,12 +27,12 @@ int main(int argc, char *argv[])
       if((fp = fopen(argv[i], "r")) == NULL) {
 		printf("can't open %s \n", argv[i]);
 		return 1;
-		
+
       } else {
 		filecheck(fp, stdout);
 		fclose(fp);
       }
-	  
+
   for(i = 0; i < 5; i++)
     if(count[i] > 0) {
       for(j = 0; j < count[i]; j++) printf("%c", letter[i]);

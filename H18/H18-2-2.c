@@ -14,15 +14,14 @@ int is_symmetric(char string[])
   }
   printf("\n");
 
-  /* 配列への代入 */
   for(i = 0; string[i] != '\0'; i++) {
-    string2[i] = string[s-1]; /*sは一つ下げて合わせている*/
+    string2[i] = string[s-1];
     printf("%c", string2[i]);
     s--;
   }
   printf("\n");
 
-  /* チェック */
+
   for(i = 0; string[i] != '\0'; i++) {
     if(string[i] != string2[i]) {
       flag = 1;
@@ -30,10 +29,10 @@ int is_symmetric(char string[])
   }
 
   if(flag == 0) {
-    printf("シンメトリーですよ\n");
+    printf("symmetry\n");
 	return 0;
   }else{
-    printf("アシンメトリーですよ\n");
+    printf("asymmetry\n");
 	return 1;
   }
 }

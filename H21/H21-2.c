@@ -6,7 +6,7 @@ void print_array(int a[], int n) {
 	for(i = 0; i < n-1; i++) {
 		printf("%d,", a[i]);
 	}
-	
+
 	printf("%d\n", a[n-1]);
 }
 
@@ -37,10 +37,10 @@ void sort4(int a[])
 	check_swap(a, 0, 3);
 	check_swap(a, 1, 2);
 	check_swap(a, 2, 3);
-	
+
 	check_swap(a, 0, 1);
 	check_swap(a, 1, 2);
-	
+
 }
 
 int main()
@@ -49,12 +49,12 @@ int main()
 	int b[5] = {3, 5, 2, 1, 4};
 	int c[5] = {1, 2, 3, 4, 5};
 	int d[5] = {5, 4, 3, 2, 1};
-	
+
 	int a4[5] = {1, 4, 2, 3};,
-	
+
 	sort(d, 5);
-	
+
 	sort4(a4);
-	
+
 	return 0;
 }

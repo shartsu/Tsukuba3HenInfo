@@ -46,7 +46,7 @@ pntr f2(pntr p)
 
 int g0(pntr p)
 {
-	if(p == Nil) 
+	if(p == Nil)
 		return 0;
 	else
 		return 1 + g0(f2(p));
@@ -82,7 +82,7 @@ void printAux(pntr p)
 			if(f2(p) != Nil)
 				printf(" ");
 		}
-		
+
 		printAux(f2(p));
 	}
 }
@@ -102,7 +102,7 @@ int main()
 	pntr list0 = f0(i0, f0(i1, f0(i2, Nil)));
 	pntr list1 = f0(i0, list0);
 	pntr list2 = f0(list0, list0);
-	
+
 	printf("list0 ="); printList(list0);
 	printf("list1 ="); printList(list1);
 	printf("list2 ="); printList(list2);

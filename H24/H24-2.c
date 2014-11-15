@@ -7,7 +7,7 @@ void print_array(int i, int s, int ok[]) {
   for(j = 0; j <= s; j++) {
     if(ok[j] == 1) printf("%d ", j);
   }
-  
+
   printf("\n");
 }
 

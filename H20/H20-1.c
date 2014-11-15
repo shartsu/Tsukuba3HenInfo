@@ -28,7 +28,7 @@ int halve(int n) {
 }
 
 int func2(int b, int n) {
-	
+
 	if(n == 0) {
 		return 1;
 	} else if(iseven(n) == TRUE) {
@@ -43,6 +43,6 @@ int main()
 
 	printf("%d\n", func(5, 4));
 	printf("%d\n", func2(5, 4));
-	
+
 	return 0;
 }

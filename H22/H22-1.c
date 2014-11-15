@@ -5,7 +5,7 @@ int sum1(int n) {
 	do {
 		s = s + n;
 	} while (n-- > 0);
-	
+
 	return s;
 }
 
@@ -15,7 +15,7 @@ int sum2(int a[], int n)
 	for(j = 0; j < n; j++) {
 		s += a[j];
 	}
-	
+
 	return s;
 }
 
@@ -25,7 +25,7 @@ int sum3(int *a, int n)
 	for(i = 0; i < n; i++) {
 		s += *a++;
 	}
-	
+
 	return s;
 }
 
@@ -56,10 +56,10 @@ int main()
 {
 	int n = 10, s;
 	int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-	
+
 	s = sum1(n);
 	printf("n = %d  s = %d\n", n, s);
-	
+
 	printf("sum2(a, 10) = %d\n", sum2(a,10));
 	printf("sum3(a, 10) = %d\n", sum3(a,10));
 	printf("sum4(a, 10) = %d\n", sum4(a,10));

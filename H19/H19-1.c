@@ -73,7 +73,7 @@ int question2(Node *node, char key) {
   int value = -1;
   p0 = p1 = 0;
   enqueue(node);
-  
+
   do {
     node = dequeue();
     if(node->label == key) {

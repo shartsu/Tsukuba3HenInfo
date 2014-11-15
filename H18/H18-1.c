@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
   printList("(2) ", top0);
   rev(top0);
   printList("(4) ", top0);
-  
+
   top1 = malloc(sizeof(struct node));
   top2 = malloc(sizeof(struct node));
 
@@ -44,7 +44,7 @@ void makeList(link top, int n)
     x = malloc(sizeof(struct node));
     x->item = i;
     x->next = NULL;
-    
+
     p->next = x;
     p = x;
   }
@@ -54,7 +54,7 @@ void printList(char *msg, link top)
 {
   link x = top->next;
   printf("%s", msg);
-  
+
   while(x != NULL) {
     printf("%d ", x->item);
     x = x->next;
@@ -66,14 +66,14 @@ void printList(char *msg, link top)
 void rev(link top)
 {
   link p = NULL, q, x = top->next;
-  
+
   while(x != NULL) {
     q = x->next;
     x->next = p;
     p = x;
     x = q;
   }
-  
+
   top->next = p;
 }
 

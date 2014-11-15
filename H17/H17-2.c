@@ -62,11 +62,11 @@ void print_tree2( struct node *p ) {
 
 int get_height(struct node *p) {
   int left, right;
-  
+
   if(p->type == OP) {
   	left = 1 + get_height(p->left);
 	right = 1 + get_height(p->right);
-	
+
 	if(left > right) {
 		return left;
 	} else {
@@ -79,18 +79,16 @@ int get_height(struct node *p) {
 main()
 {
   struct node *n1, *n2, *n3, *n4, *n5, *n6, *n7 ;
-  
+
   n1 = MAKE_NUM(1);
   n2 = MAKE_NUM(10);
   n3 = MAKE_NUM(100);
-  /*©•ª‚Å’Ç‰Á‚µ‚½•ª`ŒŸØ‚Ì‚½‚ß*/
   n6 = MAKE_NUM(50);
   n7 = MAKE_OP(SUB, n2, n6);
-  
+
   n4 = MAKE_OP(ADD,n1,n7);
   n5 = MAKE_OP(MUL,n3,n4);
 
-  
   print_tree(n5);
   printf("\n");
   print_tree2(n5);

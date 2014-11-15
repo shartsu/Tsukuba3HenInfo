@@ -1,7 +1,6 @@
 #include <stdio.h>
 #define N 5
 
-	
 int a[5][5] ={ {0, 1, 1, 0, 0},
 			   {1, 0, 0, 1, 0},
 			   {0, 1, 0, 1, 0},
@@ -10,7 +9,7 @@ int a[5][5] ={ {0, 1, 1, 0, 0},
 
 int maxrank() {
 	int i, j, rank, max = 0;
-	
+
 	for(i = 0; i < N; i++) {
 		rank = 0;
 		for(j = 0; j < N; j++) {
@@ -18,12 +17,12 @@ int maxrank() {
 				rank++;
 			}
 		}
-		
+
 		if(rank > max){
 			max = rank;
 		}
 	}
-	
+
 	return max;
 }
 
@@ -34,28 +33,28 @@ int reachable(int start, int goal){
 		visited[i] = 0;
 		checked[i] = 0;
 	}
-	
+
 	i = start;
 	while(1) {
 		if(i == goal)
 			return 1;
-		
+
 		visited[i] = 1;
 		for(j = 0; j < N; j++) {
 			if(a[i][j]){
 				checked[j] = 1;
 			}
 		}
-		
+
 		for(j = 0; j < N; j++) {
 			if(!visited[j] && checked[j]) {
-				
+
 				return (reachable(j, goal));
-				
+
 				break;
 			}
 		}
-		
+
 		if((visited[goal]) == 0) {
 			return 0;
 		}
@@ -86,5 +85,3 @@ int main()
 	printf("%d\n", reachable(4, 3));
 	printf("%d", maxrank());
 }
-	
-	

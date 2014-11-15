@@ -40,11 +40,11 @@ c0ptr mkMat(int m, int n, int data[]){
 		prev1 = c1;
       }
     }
-	
+
     prev1->next = Ni1;
     prev0 = c0;
   }
-  
+
   prev0 -> left = Ni1;
   return mat;
 }
@@ -72,7 +72,7 @@ int f0(c0ptr mat) {
       n++;
   	}
   }
-  
+
   return n;
 }
 
@@ -80,7 +80,7 @@ void f1(c0ptr m0, c0ptr m1){
   c0ptr c01, c02;
   c1ptr c11, c12;
 
-  for(c01 = m0, c02 = m1; c01 != Ni1; 
+  for(c01 = m0, c02 = m1; c01 != Ni1;
       c01 = c01->left, c02 = c02->left) {
 	  	for(c11 = c01->right, c12 = c02->right; c11 != Ni1;
 		c11 = c11->next, c12 = c12->next) {
